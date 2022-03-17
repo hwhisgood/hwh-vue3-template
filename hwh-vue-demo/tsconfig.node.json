@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": "./", //编译入口
+    "composite": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true, //作用：将每个文件作为单独的模块
+    "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查
+    "paths": { //模块名到基于 baseUrl的路径映射的列表,对应alias文件路径别名
+      "@/*": [
+        "src/*"
+      ],
+      "views/*": [
+        "src/views/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ]
+    }
+  },
+  "include": [
+    "vite.config.ts"
+  ],
+  //排除不需要ts编译的文件
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+}

@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 
+// 帮助编译器识别类型。
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
